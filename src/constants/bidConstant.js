@@ -1,0 +1,21 @@
+export const BIDDATA = 'bid_data'
+export const BIDHISTORY='bid_history'
+export const SUPPLEIRWISEBID='supplier_wise_bid'
+
+export const RANK_REQUEST = 'RANK_REQUEST';
+export const RANK_SUCCESS = 'RANK_SUCCESS';
+export const RANK_FAIL = 'RANK_FAIL';
+
+export const PLACE_BID_REQUEST = 'PLACE_BID_REQUEST';
+export const PLACE_BID__SUCCESS = 'PLACE_BID__SUCCESS';
+export const PLACE_BID_FAIL = 'PLACE_BID_FAIL';
+
+
+export const BID_HISTORY_REQUEST = 'BID_HISTORY_REQUEST';
+export const BID_HISTORY_SUCCESS = 'BID_HISTORY_SUCCESS';
+export const BID_HISTORY_FAIL = 'BID_HISTORY_FAIL';
+
+
+export const SUPPLIER_HISTORY_REQUEST = 'SUPPLIER_HISTORY_REQUEST';
+export const SUPPLIER_HISTORY_SUCCESS = 'SUPPLIER_HISTORY_SUCCESS';
+export const SUPPLIER_HISTORY_FAIL = 'SUPPLIER_HISTORY_FAIL';

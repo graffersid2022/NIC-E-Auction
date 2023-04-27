@@ -1,0 +1,103 @@
+/*********** Global Setup ***********/
+body ::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+html,
+body {
+  background-color: #F8F8F8;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+
+.white-panel {
+  margin: 0.5em 0em;
+  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.1607843137));
+}
+
+.container-popup {
+  opacity: 0.3;
+}
+
+.auction-details {
+  background-color: #FFFFFF;
+  border-radius: 0.5em;
+  padding: 0.8em;
+  margin: 0.5em 0em;
+}
+.auction-details .auction {
+  display: flex;
+  background-color: #F4F5F6;
+  border-radius: 0.5em;
+  align-items: center;
+  padding: 1em;
+}
+.auction-details .auction .auction-id-label {
+  font-size: 1.2em;
+  color: #0093E1;
+  font-weight: bold;
+}
+.auction-details .auction .auction-no {
+  color: #333333;
+  font-weight: bold;
+  margin-left: 1em;
+}
+.auction-details .project {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.5em;
+}
+.auction-details .project div {
+  margin: 0.2em 0.5em;
+}
+.auction-details .project .pr-number {
+  color: #0093E1;
+  font-weight: bold;
+}
+.auction-details .project .num {
+  color: #333333;
+  font-weight: bold;
+  text-align: left;
+}
+
+.time-label {
+  background-color: red;
+}
+
+@media only screen and (max-width: 1024px) {
+  html,
+body {
+    background-color: #F8F8F8;
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+  }
+  .auction-details .auction {
+    display: flex;
+    flex-direction: column;
+    padding: 0.3em;
+    align-items: baseline;
+  }
+  .auction-details .project {
+    display: flex;
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,657 @@
+@import "main.scss";
+
+html,
+body {
+    background-color: #AAAAAA;
+    width: 100%;
+    height: 100%;
+}
+
+// Main history container
+
+
+.slide-up-minimize {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    .fullview {
+        // margin-top: 1em;
+        height: 100vh;
+        // height: calc(100vh - 20vh);
+        overflow: scroll;
+        top:auto;
+    }
+
+    .popup-section {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 1em;
+        background-color: $lightcolor;
+        filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.1607843137));
+        z-index: 1;
+       
+        // height: 100%;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+
+            img {
+                width: 1.5em;
+                height: 1.5em;
+                cursor: pointer;
+            }
+
+            // Back btn & images section
+            .header-history-section {
+                display: flex;
+                cursor: pointer;
+                align-items: center;
+
+                .back {
+                    color: $textcolour;
+                    font-size: 0.8em;
+                    font-weight: $fweight;
+                    margin-left: 0.5em;
+                    align-self: baseline;
+                }
+
+                // History-section
+                .pre-history {
+                    margin-left: 0.5em;
+                    font-weight: $fweight;
+                    align-self: baseline;
+
+                }
+            }
+        }
+
+        // Bidder section & Updates section
+        .bid-updates-section {
+            display: flex;
+            justify-content: center;
+            margin-top: .5em;
+
+            .bid-tittle {
+                // color: $lighttextcolor;
+                font-size: 0.8em;
+                cursor: pointer;
+            }
+
+            .updates {
+                font-size: 0.8em;
+                font-weight: $fweight;
+                margin-left: 1em;
+                // color: $textcolour;
+                font-size: 0.8em;
+                cursor: pointer;
+            }
+
+            .activeTab {
+                color: $textcolour;
+                padding-bottom: 0.5em;
+                border-bottom-style: solid;
+                border-bottom-width: 3.1px;
+                width: -moz-fit-content;
+                width: fit-content;
+            }
+
+            .inactiveTab {
+                color: $lighttextcolor;
+            }
+        }
+
+        // Body section
+        .vertical-scroll-bar {
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: 45vh;
+
+            .history-list-item {
+                position: relative;
+
+                .history-timestamp {
+                    position: absolute;
+                    color: $lighttextcolor;
+                    font-size: 0.7em;
+                    right: 2em;
+                    padding: 0.8em 0em;
+                }
+
+                .history {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin: 1em 0em;
+                    padding: 0.8em;
+                    background-color: #F4F5F6;
+                    border-radius: $default-border-radius;
+
+                    img {
+                        width: 2em;
+                        height: 2em;
+                        margin-right: 0.8em;
+                    }
+
+                    .Announcement-detail {
+                        display: flex;
+                        flex-direction: column;
+                        flex-grow: 1;
+
+
+                        .announcement-tittle {
+                            color: $textcolour ;
+                            font-weight: $fweight;
+                        }
+
+                        .notice-body {
+                            font-size: 0.8em;
+                            color: $normaltextcolour ;
+
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .vertical-scroll-bar-supplier-rank{
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: 45vh;
+
+            .rank-bidvalue-time {
+                display: grid;
+                background-color: $bgcolour2;
+                border-radius: $default-border-radius;
+                padding: 0.5em;
+                margin: 1em 0em;
+                grid-template-columns: 5% 12% 33% 4% 25% 22%;
+
+
+                .item-container {
+                    text-align: left;
+                    justify-content: center;
+                    align-items: center;
+                    align-self: center;
+
+                    .down-arrow-1 {
+                        display: inline-block;
+                        width: 0.7em;
+
+                    }
+
+                    .down-arrow-2 {
+                        display: inline-block;
+                        width: 1.2em;
+                        padding-right: 0.6em;
+                    }
+
+                    .label {
+                        color: #9A9A9A;
+                        font-size: 0.8em;
+
+                    }
+
+                    .rank-number {
+                        color: $textcolour;
+                        font-size: 1em;
+                        font-weight: $fweight;
+                    }
+
+                    .aed {
+                        font-size: 0.8em;
+                        color: #ABABAB;
+                    }
+
+                    .time-tracker-aed {
+                        color: #ABABAB;
+                        font-size: 0.8em;
+                    }
+
+                }
+            }
+
+            
+        }
+
+    }
+}
+.slide-up-expand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .fullview {
+        // margin-top: 1em;
+        height: 100vh;
+       
+    }
+
+    .popup-section {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 1em;
+        background-color: $lightcolor;
+        filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.1607843137));
+        z-index: 1;
+        // height: 100%;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+
+            img {
+                width: 1.5em;
+                height: 1.5em;
+                cursor: pointer;
+            }
+
+            // Back btn & images section
+            .header-history-section {
+                display: flex;
+                cursor: pointer;
+                align-items: center;
+
+                .back {
+                    color: $textcolour;
+                    font-size: 0.8em;
+                    font-weight: $fweight;
+                    margin-left: 0.5em;
+                    align-self: baseline;
+                }
+
+                // History-section
+                .pre-history {
+                    margin-left: 0.5em;
+                    font-weight: $fweight;
+                    align-self: baseline;
+
+                }
+            }
+        }
+
+        // Bidder section & Updates section
+        .bid-updates-section {
+            display: flex;
+            justify-content: center;
+            margin-top: .5em;
+
+            .bid-tittle {
+                // color: $lighttextcolor;
+                font-size: 0.8em;
+                cursor: pointer;
+            }
+
+            .updates {
+                font-size: 0.8em;
+                font-weight: $fweight;
+                margin-left: 1em;
+
+                // color: $textcolour;
+                font-size: 0.8em;
+                cursor: pointer;
+            }
+
+            .activeTab {
+                color: $textcolour;
+                padding-bottom: 0.5em;
+                border-bottom-style: solid;
+                border-bottom-width: 3.1px;
+                width: -moz-fit-content;
+                width: fit-content;
+            }
+
+            .inactiveTab {
+                color: $lighttextcolor;
+            }
+        }
+
+        // Body section
+        .vertical-scroll-bar {
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: calc(100vh - 30vh);
+
+            .history-list-item {
+                position: relative;
+
+                .history-timestamp {
+                    position: absolute;
+                    color: $lighttextcolor;
+                    font-size: 0.7em;
+                    right: 2em;
+                    padding: 0.8em 0em;
+                }
+
+                .history {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin: 1em 0em;
+                    padding: 0.8em;
+                    background-color: #F4F5F6;
+                    border-radius: $default-border-radius;
+
+                    img {
+                        width: 2em;
+                        height: 2em;
+                        margin-right: 0.8em;
+                    }
+
+                    .Announcement-detail {
+                        display: flex;
+                        flex-direction: column;
+                        flex-grow: 1;
+
+
+                        .announcement-tittle {
+                            color: $textcolour ;
+                            font-weight: $fweight;
+                        }
+
+                        .notice-body {
+                            font-size: 0.8em;
+                            color: $normaltextcolour ;
+
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .vertical-scroll-bar-supplier-rank {
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: calc(100vh - 30vh);
+
+            .rank-bidvalue-time {
+                display: grid;
+                background-color: $bgcolour2;
+                border-radius: $default-border-radius;
+                padding: 0.5em;
+                margin: 1em 0em;
+                grid-template-columns: 5% 12% 33% 4% 25% 22%;
+
+
+                .item-container {
+                    text-align: left;
+                    justify-content: center;
+                    align-items: center;
+                    align-self: center;
+
+                    .down-arrow-1 {
+                        display: inline-block;
+                        width: 0.7em;
+
+                    }
+
+                    .down-arrow-2 {
+                        display: inline-block;
+                        width: 1.2em;
+                        padding-right: 0.6em;
+                    }
+
+                    .label {
+                        color: #9A9A9A;
+                        font-size: 0.8em;
+
+                    }
+
+                    .rank-number {
+                        color: $textcolour;
+                        font-size: 1em;
+                        font-weight: $fweight;
+                    }
+
+                    .aed {
+                        font-size: 0.8em;
+                        color: #ABABAB;
+                    }
+
+                    .time-tracker-aed {
+                        color: #ABABAB;
+                        font-size: 0.8em;
+                    }
+
+                }
+            }
+
+            
+        }
+
+    }
+}
+.slide-up-expand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .fullview {
+        // margin-top: 1em;
+        height: 100vh;
+       
+    }
+
+    .popup-section {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 1em;
+        background-color: $lightcolor;
+        filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.1607843137));
+        z-index: 1;
+        // height: 100%;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+
+            img {
+                width: 1.5em;
+                height: 1.5em;
+                cursor: pointer;
+            }
+
+            // Back btn & images section
+            .header-history-section {
+                display: flex;
+                cursor: pointer;
+                align-items: center;
+
+                .back {
+                    color: $textcolour;
+                    font-size: 0.8em;
+                    font-weight: $fweight;
+                    margin-left: 0.5em;
+                    align-self: baseline;
+                }
+
+                // History-section
+                .pre-history {
+                    margin-left: 0.5em;
+                    font-weight: $fweight;
+                    align-self: baseline;
+
+                }
+            }
+        }
+
+        // Bidder section & Updates section
+        .bid-updates-section {
+            display: flex;
+            justify-content: center;
+            margin-top: .5em;
+
+            .bid-tittle {
+                // color: $lighttextcolor;
+                font-size: 0.8em;
+                cursor: pointer;
+            }
+
+            .updates {
+                font-size: 0.8em;
+                font-weight: $fweight;
+                margin-left: 1em;
+
+                // color: $textcolour;
+                font-size: 0.8em;
+                cursor: pointer;
+            }
+
+            .activeTab {
+                color: $textcolour;
+                padding-bottom: 0.5em;
+                border-bottom-style: solid;
+                border-bottom-width: 3.1px;
+                width: -moz-fit-content;
+                width: fit-content;
+            }
+
+            .inactiveTab {
+                color: $lighttextcolor;
+            }
+        }
+
+        // Body section
+        .vertical-scroll-bar {
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: calc(100vh - 25vh);
+
+            .history-list-item {
+                position: relative;
+
+                .history-timestamp {
+                    position: absolute;
+                    color: $lighttextcolor;
+                    font-size: 0.7em;
+                    right: 2em;
+                    padding: 0.8em 0em;
+                }
+
+                .history {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin: 1em 0em;
+                    padding: 0.8em;
+                    background-color: #F4F5F6;
+                    border-radius: $default-border-radius;
+
+                    img {
+                        width: 2em;
+                        height: 2em;
+                        margin-right: 0.8em;
+                    }
+
+                    .Announcement-detail {
+                        display: flex;
+                        flex-direction: column;
+                        flex-grow: 1;
+
+
+                        .announcement-tittle {
+                            color: $textcolour ;
+                            font-weight: $fweight;
+                        }
+
+                        .notice-body {
+                            font-size: 0.8em;
+                            color: $normaltextcolour ;
+
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .vertical-scroll-bar-supplier-rank {
+            overflow-x: hidden;
+            overflow-y: auto;
+
+            .rank-bidvalue-time {
+                display: grid;
+                background-color: $bgcolour2;
+                border-radius: $default-border-radius;
+                padding: 0.5em;
+                margin: 1em 0em;
+                grid-template-columns: 5% 12% 33% 4% 25% 22%;
+
+
+                .item-container {
+                    text-align: left;
+                    justify-content: center;
+                    align-items: center;
+                    align-self: center;
+
+                    .down-arrow-1 {
+                        display: inline-block;
+                        width: 0.7em;
+
+                    }
+
+                    .down-arrow-2 {
+                        display: inline-block;
+                        width: 1.2em;
+                        padding-right: 0.6em;
+                    }
+
+                    .label {
+                        color: #9A9A9A;
+                        font-size: 0.8em;
+
+                    }
+
+                    .rank-number {
+                        color: $textcolour;
+                        font-size: 1em;
+                        font-weight: $fweight;
+                    }
+
+                    .aed {
+                        font-size: 0.8em;
+                        color: #ABABAB;
+                    }
+
+                    .time-tracker-aed {
+                        color: #ABABAB;
+                        font-size: 0.8em;
+                    }
+
+                }
+            }
+
+            
+        }
+
+    }
+}
+
+
+@media only screen and (max-width: 1180px) {
+
+    .slide-up-minimize .popup-section {
+        width: 100%;
+        top: 75%;
+        border-radius: 1em 1em 0em 0em;
+        height: calc(100vh - 40vh);
+        position: fixed;
+    }
+    .slide-up-expand .popup-section {
+        width: 100%;
+        height: 100vh;
+        margin-top: 80px;
+        border-radius: 1em 1em 0em 0em;
+    }
+
+}

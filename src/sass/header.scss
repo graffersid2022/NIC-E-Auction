@@ -1,0 +1,76 @@
+
+@import "main.scss";
+
+.navbar-container {
+    width: 100%;
+    background-color: $textcolour;
+
+    .navbar-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        max-width: 64em;
+        margin: 0 auto;
+
+        .logo {
+            padding: 0.3em;
+            left: 4em;
+            background-color: $lightcolor;
+            border-radius: 100%;
+
+            .logo-img {
+                height: 2em;
+                object-fit: contain;
+            }
+        }
+
+        .navbar-tittle {
+            position: relative;
+            font-size: 1.6em;
+            font-style: italic;
+            color: $lightcolor;
+            font-weight: $fweight;
+            .title-center{
+                text-align: center;
+            }
+        }
+
+        .logout {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            color: $lightcolor;
+            font-weight: $fweight;
+
+            .logout-img {
+                width: 1.5em;
+                height: 1.5em;
+
+            }
+
+            .mobile-logout {
+                margin-left: 0.5em;
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .navbar-container .navbar-section {
+        padding: 1em;
+
+        .navbar-tittle {
+            font-size: 1.2em;
+        }
+    }
+
+    .navbar-container .navbar-section .logo .logo-img{
+        height: 1.2em;
+    }
+
+    .mobile-logout {
+        display: none;
+    }
+}

@@ -1,0 +1,86 @@
+.App {
+    text-align: center;
+    margin-top:5%
+  }
+
+.color{
+  color: #54a1e9;
+}
+
+.greetings{
+  display: inline;
+  margin-left: 280px
+}
+
+.logout-button{
+  display: inline;
+  margin-left: 20px;
+  height: 40px;
+  width: 100px
+}
+
+.hours-button{
+    width: 70px;
+    height: 75px;
+    background-color: orange;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 10px
+}
+
+.align-text{
+  text-align: left;
+}
+
+.align-text-right{
+  text-align: right;
+}
+
+.greetings-column{
+  margin-top: -30px
+}
+
+.auction-id{
+  margin-left: -40px
+}
+
+.project-name{
+  margin-left: -200px
+}
+
+.rank{
+  margin-left: -130px
+}
+
+.rank-upper-icon{
+  color: lightgreen;
+  margin-right: 5px;
+}
+
+.rank-downward-icon{
+  color: red
+}
+
+.history-rank{
+  margin-left: -180px;
+}
+
+.input{
+height: 50px;
+margin-right: 180px;
+padding-left: 10px;
+font-size: 20px;
+}
+
+.number{
+  margin-left: -80px
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+.update-fontSize{
+font-size: 10px;
+}

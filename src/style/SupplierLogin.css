@@ -1,0 +1,11 @@
+/* .container{
+    margin-top: 2%;
+} */
+.field.signup button.ui.fluid.large.blue.submit.button {
+    border-radius: 25px ;
+    width: 50%;
+    margin-left: 24% ;
+}
+button.ui.fluid.large.blue.submit.button {
+    border-radius: 25px;
+}
